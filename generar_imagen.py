@@ -10,8 +10,6 @@ BORDER = 50
 # Create a 1024x1024x3 array of 8 bit unsigned integers
 data = np.zeros((WIDTH, HEIGHT, 3), dtype=np.uint8)
 
-#data[512,512] = [254,0,0]       # Makes the middle pixel red
-#data[512,513] = [0,0,255]       # Makes the next pixel blue
 # First random pixel
 data[0, 0] = [randint(0, 255), randint(0, 255), randint(0, 255)]
 
@@ -38,6 +36,5 @@ for x in range(0, WIDTH):
         
 img = smp.toimage( data )       # Create a PIL image
 #img.show()    
-#name = str(ceil(time.time())) + '.png'
-name = '/Users/androsfenollosa/Pictures/background-color.png'
+name = 'background-color.png'
 img.save(name, "PNG")
