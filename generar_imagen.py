@@ -16,7 +16,7 @@ data[0, 0] = [randint(0, 255), randint(0, 255), randint(0, 255)]
 for x in range(0, WIDTH):
     for y in range(0, HEIGHT, BORDER):
         if y > 0:
-            new_color = data[0, y - BORDER]
+            new_color = data[0, y - 1]
         else:
             new_color = data[0, 0]
         # Get one color
